@@ -81,7 +81,7 @@ st.plotly_chart(fig, use_container_width=True)
 # 4. Gemini AI 진단 요청 (전문가님의 설정 반영)
 if st.button("AI 전문가 심층 분석 리포트 생성"):
     with st.spinner("전문가 AI가 데이터를 정밀 분석 중입니다..."):
-        model = genai.GenerativeModel('gemini-1.5-flash'), 
+        model = genai.GenerativeModel('gemini-1.5-flash') 
         system_instruction="""너는 조직개발 전문가야. 7점 척도 데이터를 분석해서 강점과 약점을 짚어주고 넷플릭스/아마존 사례로 해결책을 제시해줘."""
         
         data_summary = f"진단 점수: {responses}"
@@ -89,4 +89,5 @@ if st.button("AI 전문가 심층 분석 리포트 생성"):
         
         st.success("진단 리포트가 완성되었습니다!")
         st.markdown(response.text)
+
 
